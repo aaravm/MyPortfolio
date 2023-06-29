@@ -15,126 +15,67 @@
       h1 {
         font-family: Lucida, Helvetica, sans-serif;
       }
-      body{
-        background: #001f2b;
+      body {
+        background: #ffffff;
+      }
+      #Heading {
+        color: #000000;
+        font-family: Romana, Arial, Helvetica, sans-serif;
+        font-size: 60px;
+        font-weight: 700;
+      }
+      .new_p {
+        display: inline;
       }
     </style>
   </head>
-  <body >
-    <nav class="navbar navbar-default" style=" background-color: #1f2833">
-    <div class="container-fluid " style=" color: #00415a" >
-      <ul class="nav navbar">
-        <li><a href="#Hello" class="nav-link">Hello</a> </li>
-        <li><a href="#abt" class="nav-link">About Me  </a>     </li>
-        <li><a href="#fav" class="nav-link">Fav quote    </a>   </li>
-        <li><a href="#contact" class="nav-link">Important Links    </a>    </li>
-        <li><a href="#link" class="nav-link">Contact      </a>     </li>
-      </ul>
-    </div>
-  </nav>
+  <body>
+    <nav class="navbar navbar-default sticky-top " style="background-color: #000000">
+      <div class="container-fluid " style="color: #ffffff">
+        <ul class="nav navbar">
+          <li class="fs-3 me-5">My Portfolio &nbsp;</li>
+          <li><a href="index.html" class="nav-link ">Welcome</a></li>
+            <li><a href="about.html" class="nav-link">About Me </a></li>
+            <li><a href="project.html" class="nav-link">My Projects </a></li>
+          <!-- <li><button>Change color</button></li> -->
+        </ul>
+      </div>
+    </nav>
     <div id="Hello">
-      <h1 class="text-center fs-1 fw-bold" style=" color: #4dfff3">Hello</h1>
+      <h1 class="text-center fs-1 fw-bold" style="color: #000000"></h1>
     </div>
     <div class="row">
-      <div class="col border border-3 border-success align-middle text-wrap" style="padding: 5% 0;" >
-        <p class="fs-2 text-center " style=" color: #66FCF1">
-          HI!! I am Aarav Mehta, a student at IIT Varanasi, pursuing mathematics
-          and computing. Nice to meet you!
+      <div class="col align-middle text-wrap" style="padding: 5% 0">
+        <p class="text-center" id="Heading">
+          Hello!, <br />
+          I am Aarav Mehta
         </p>
-        <p class=" text-center" style=" color: #ffffff">So, this my webpage, regarding my Portfolio. Hope you enjoy it.. 
+        <p class="fs-1 text-center new_p" style="color: #000000">
+           &nbsp &nbsp &nbsp A
         </p>
-    
-        
+        <span class="auto-input fs-1 text-warning text-center"></span>
+        <p class="fs-1 text-center new_p" style="color: #000000">
+          at IIT Varanasi
+        </p>
+        <p>
+          <br>
+          <br>
+          <div class="text-center">
+          <a class="btn btn-primary" href="about.html" role="button">Wanna know more about me?</a>
+          &nbsp &nbsp
+          <a class="btn btn-primary" href="about.html" role="button">See my projects..</a>
+          </div>
+        </p>
       </div>
-      <div
-        class="col main-content border border-3 border-success bg-color-primary bg-dark"
-      >
+      <div class="col main-content">
         <div class="col-md-9">
-          <img src="me.jpg" alt="a photo" class="img-fluid" />
+          <img src="Picture2.png" alt="a photo" class="img-fluid" />
         </div>
       </div>
     </div>
-    <div id="abt">
-      <p class="fs-3 text-center" style=" color: #66FCF1">About me:</p>
-      <p class=" text-center" style=" color: #ffffff">
-        I am an IIT BHU freshie. I am learning every second, every day, wherever I
-        go, whether from my seniors, professors, or peers. I am in the maths and
-        computing department. <br />
-        I want to tell you why I chose this as my field of study. When I was in
-        10th, I had no specific interest in Olympiad maths. I was selected for a
-        camp at that time. When I reached there, I saw everyone doing complicated
-        Olympiad maths, and I got interested in seeing what all the fuss was
-        about. I tried it and found it to be fascinating. I continued doing that
-        even in 11th, amid my JEE advanced preparation. Eventually, I cracked JEE
-        advanced. Then I saw the options that I had. When I saw that I was getting
-        mathematics and computing at IIT BHU, I knew I had to take it, as it would
-        allow me to continue doing maths and learn computer science!
-        <br />
-        After reaching here, I feel like I made the right decision. Now I am
-        trying out everything I can and will continue doing so until I find out
-        what makes me tick, be it research, coding, business, or whatever else it
-        may be.
-        <br><br><br>
-      </p>
-    </div>
-    <div id="fav">
-    <p class="fs-4" style=" color: #66FCF1">&nbsp My favourite quote:</p>
-    <div class="border border-info rounded-3 ">
-    <p class="text-center fst-italic fs-2 text-warning" > "Chaos isn't a pit, Chaos is a ladder"</p>
-    <div class="row ">
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col">
-    <p class="text-light">~Peter Baelish(Game of Thrones)  </p></div>
-    <div class="col-1"></div>
-  </div></div>
-  <div id="link">
+
     
-      
-    </div>
-    <br><br>  
-    <p class="fs-4" style=" color: #66FCF1">Important links:</p>
-        <ul class="list-group">
-          <div class="row row-cols-3">
-            <div class="col-2">
-          <li class="border  border-1 border-warning" style=" background-color: #00415a">
-            <a href="https://www.linkedin.com/in/aarav-mehta-445959250/" style="color: #ffffff "              >Linkedin Profile</a
-            >
-          </li></div>
-          <div class="col"></div>
-          <div class="col-2">
-          <li>
-            
-          </li></div>
-          <div class="col"></div>
-          <div class="col-2">
-            <li class="border  border-1 border-warning" style=" background-color: #00415a"><a href="https://github.com/aaravm" style="color: #ffffff "         >Github Profile</a></li></div>
-          <div class="col"></div>
-          <div class="col"></div>
-          
-          <div class="col-2"></div>
-          <div class="col-2">
-            <li class="border  border-1 border-warning" style=" background-color: #00415a"><a href="https://www.chess.com/member/aaravm" style="color: #ffffff "         >chess.com Profile</a></li></div>
-          <div class="col"></div>
-          
-        </ul>
-      </div>
-      <br>
-    <div class="row">
-      <div class="col"></div>
-      <div class="col-3 border border-primary text-wrap"  id="contact">
-        <p style=" color: #66FCF1">Contact Me at:</p>
-        <p class="text-light">
-          Email:
-          <a href="mailto:aarav.mehta.mat22@itbhu.ac.in"
-            >aarav.mehta.mat22@itbhu.ac.in</a
-          ><br>
-          Phone:
-          <a href="9653321136">9653321136</a>
-        </p>
-      </div>
-      <div class="col"></div>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
