@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      h1 {
+        font-family: Lucida, Helvetica, sans-serif;
+      }
+      body{
+        background: #ffffff;
+      }
+      #Heading{color: #000000; 
+                font-family: Romana, Arial, Helvetica, sans-serif;
+                font-size: 60px; 
+                font-weight: 700;
+
+
+      }
+      .new_p {
+           color: #000000;
+           font-weight: 500;
+      }
+      .social-icon {
+        color: #aaaaaa;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+      .social-icon:hover{
+        color: #333333
+      }
+      /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#yp{
+  display: none;
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default sticky-top " style="background-color: #000000">
+        <div class="container-fluid " style="color: #ffffff">
+          <ul class="nav navbar">
+            <li class="fs-3 me-5">My Portfolio &nbsp;</li>
+            <li><a href="index.html" class="nav-link ">Welcome</a></li>
+            <li><a href="about.html" class="nav-link">About Me </a></li>
+            <li><a href="project.html" class="nav-link">My Projects </a></li>
+            <!-- <li><button>Change color</button></li> -->
+          </ul>
+        </div>
+      </nav>
+    <div id="abt">
+        <p class="fs-1 text-center new_p">About me:</p>
+        <p class=" text-center" style=" color: #000000">
+          I am an IIT BHU freshie. I am learning every second, every day, wherever I
+          go, whether from my seniors, professors, or peers. I am in the maths and
+          computing department. <br />
+          I want to tell you why I chose this as my field of study. When I was in
+          10th, I had no specific interest in Olympiad maths. I was selected for a
+          camp at that time. When I reached there, I saw everyone doing complicated
+          Olympiad maths, and I got interested in seeing what all the fuss was
+          about. I tried it and found it to be fascinating. I continued doing that
+          even in 11th, amid my JEE advanced preparation. Eventually, I cracked JEE
+          advanced. Then I saw the options that I had. When I saw that I was getting
+          mathematics and computing at IIT BHU, I knew I had to take it, as it would
+          allow me to continue doing maths and learn computer science!
+          <br />
+          After reaching here, I feel like I made the right decision. Now I am
+          trying out everything I can and will continue doing so until I find out
+          what makes me tick, be it research, coding, business, or whatever else it
+          may be.
+          <br><br><br>
+        </p>
+      </div>
+      <div id="fav">
+      <p class="fs-4 new_p text-center">&nbsp My favourite quote:</p>
+      <div class="">
+      <p class="text-center fst-italic fs-2 text-primary" id="elem"> "Chaos isn't a pit, Chaos is a ladder"</p>
+      <div class="row ">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col">
+      <p class="">~Peter Baelish(Game of Thrones)  </p></div>
+      <div class="col-1"></div>
+    </div></div>
+    <div id="link">
+      <div class="new_p fs-4 text-center">My Github Projects</div>
+      <div class="container" id="lis">
+        <div class="row">
+          <div class="col new_p">Sr no.</div>
+          <div class="col new_p">Project Name</div>
+          <div class="col new_p">Language</div>
+          <div class="col new_p">Created at</div>
+          <div class="col new_p">Clone URL</div>
+          
+        </div>
+      </div>
+      </div>
+      <br><br>  
+      
+      
+        <div class="border border-primary text-wrap text-center col-4 align-self-center offset-md-4 
+        "  id="contact">
+          <p class="new_p" style=" color: #000000">Contact Me at:</p>
+          <p >
+            
+            <a class="social-icon" href="mailto:aarav.mehta.mat22@itbhu.ac.in"><ion-icon name="mail-outline"></ion-icon></a> &nbsp &nbsp &nbsp
+            <a class="social-icon phone" onclick="window.open('phone.html','name','width=600,height=400')"><ion-icon name="call-outline"></ion-icon></a> &nbsp &nbsp &nbsp
+            <a class="social-icon" href="https://www.linkedin.com/in/aarav-mehta-445959250/" ><ion-icon name="logo-linkedin"></ion-icon></a> &nbsp &nbsp &nbsp
+            <a class="social-icon" href="https://github.com/aaravm"><ion-icon name="logo-github"></ion-icon></a> &nbsp &nbsp &nbsp
+            <a class="social-icon" href="https://www.chess.com/member/aaravm"><ion-icon name="game-controller-outline"></ion-icon> &nbsp &nbsp &nbsp</a>
+          </p>
+          
+        </div>
+        <br>
+        <div class="text-center">
+        <button type="button" class="btn btn-dark form">Contact me directly</button></div>
+        <br>
+        <div class="container" id="yp">
+          <form id="myForm" action="action_page.php">
+            
+        
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="India">India</option>
+              <option value="Europe">Europe</option>
+              <option value="USA">USA</option>
+              <option value="others">others</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+        
+          </form>
+        </div>
+        <br>
+        <br>
+        <div class="sub"></div>
+        
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="scripts/abt.js" defer></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </body>
+  </html>
+  
