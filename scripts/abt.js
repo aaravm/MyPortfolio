@@ -9,7 +9,7 @@ form1.addEventListener('click', e=>{
 })
 
 // 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
-const accessToken = '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';
+const accessToken = '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';
 const apiUrl = 'https://api.github.com';
 const container = document.getElementById('project-container');
 fetch(`${apiUrl}/user/repos`, {
