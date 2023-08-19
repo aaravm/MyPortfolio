@@ -7,9 +7,47 @@ form1.addEventListener('click', e=>{
     x.style.display = "none";
     }
 })
+const fetchLinkedInProfile = async () => {
+  const url = 'https://linkedin-profiles1.p.rapidapi.com/extract?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Faarav-mehta-445959250%2F&html=1';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '59a6968ebbmsh46014aaadce47fdp1ca106jsn3b8c0b7184f5',
+      'X-RapidAPI-Host': 'linkedin-profiles1.p.rapidapi.com'
+    }
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result)
+    console.log(result.extractor.awards)
+    let awards=result.extractor.awards
+    let i1=0
+    awards.forEach(award => {
+      // Create HTML elements to display project information
+      i1++
+      const award1 = document.createElement('div');
+      award1.innerHTML = `
+      <div class="row fs-5 m1-10">
+          <div class="">${i1}.${award}</div>
+      </div>
+      `;
+      // Append the project element to the container
+      const menu1 = document.querySelector('#awar');
+      menu1.appendChild(award1);
+    });
+    
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+fetchLinkedInProfile(); // Call the async function
+
 
 // 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
-const accessToken = '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';
+const accessToken = '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';
 const apiUrl = 'https://api.github.com';
 const container = document.getElementById('project-container');
 fetch(`${apiUrl}/user/repos`, {
@@ -17,18 +55,14 @@ fetch(`${apiUrl}/user/repos`, {
     'Authorization': `Bearer ${accessToken}`
   }
 })
+
   .then(response => response.json())
   .then(data => {
+    console.log(data)
     // Process the repository data
     let i=0;
-    console.log("reached before")
     // Display the repositories on your webpage
     data.forEach(project => {
-      console.log(i)
-      const projectName = project.name;
-      const projectDescription = project.description;
-      const projectUrl = project.html_url;
-      
       const fullname=project.name;
       const Language=project.language;
       const created_at=project.created_at;
@@ -58,55 +92,6 @@ fetch(`${apiUrl}/user/repos`, {
 
 
 
-//   const accessToken2 = 'AQUnquk45qX2gaY1vXtBS6BOQvHs1B_uKQSDkq9FPizwh6wPz9npck13dV3J-Oerbt9S-pFZghkzFaG0hwbtIaRbYXwe0_RTyafeljcK1XdkDC5gJZiH3HeACYDX7bARUspRTfQPJZAWv0Tk-b2rEAarOUOn60OV2x5R8VRRZPq_FpG0SC_TyqyZIBhv2LuFraDLRyNkv8MIcC8FW-zqb67FN9qJ9fNgGbtugz919Gn8efX2O0g-EQsbZAB-eIXFM32EbKYDRnuh-GaW6VGwhPvExDg1fGX1PvR7HgIoZa7OyeANEHw1BbgvrJY9iT4EJPIi_QCDz0nuc51Bql00BXBsGtyhSQ';
-//   const apiUrl2 = 'https://api.linkedin.com/v2';
-
-// fetch(`${apiUrl2}/me`, {
-//   mode:'no-cors',
-//   headers: {
-//     'Authorization': `Bearer ${accessToken2}`,
-//     'Connection': 'Keep-Alive',
-//     'x-li-format': 'json',
-    
-//   }
-// })
-//   .then(response => response.json())
-//   .then(data => {
-//     // Process the profile data
-//     console.log(data);
-//     // Display the profile information on your webpage
-//   })
-//   .catch(error => {
-//     // Handle any errors
-//     console.error(error);
-//   });
-
-
-
-
-
-// // access code: AQBV8unlSghC4MlHL_pKdSjBVdAMZS0fZDAMAO1BtX5PUtwxk7yW3pkK9NMsJZgnNV5mVwaNSdNGvM28xfKh66Jx3Mhcc6CUrekAMjpoRKAwURcyQF2qpTxTX6yE8OFJYYeLe6BZK698hRXCQ72-XkZ5Nopc6iQFrp1NVxhxXu-M7YIgqkIIXJBJGyI7l5FVfZbR0q2a3E6vyg
-
-// const authUrl = 'https://accounts.spotify.com/api/token';
-
-// // Construct the request options
-// const requestOptions = {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/x-www-form-urlencoded'
-//   },
-//   body: 'grant_type=authorization_code&code=AQBV8unlSghC4MlHL_pKdSjBVdAMZS0fZDAMAO1BtX5PUtwxk7yW3pkK9NMsJZgnNV5mVwaNSdNGvM28xfKh66Jx3Mhcc6CUrekAMjpoRKAwURcyQF2qpTxTX6yE8OFJYYeLe6BZK698hRXCQ72&redirect_uri=http://127.0.0.1:5500/public/about.html&client_id=http://127.0.0.1:5500/public/about.html&client_secret=7496549493414508b9aee1e79e1c17bd'
-// };
-
-// // Send the request to the Spotify Accounts service
-// fetch(authUrl, requestOptions)
-//   .then(response => response.json())
-//   .then(data => {
-//     // Handle the response data
-//     const accessToken = data.access_token;
-//     // Continue with using the access token
-//   })
-//   .catch(error => console.error('Error:', error));
 
 function handleSubmit(event) {
   event.preventDefault(); // Prevent form from submitting and refreshing the page
