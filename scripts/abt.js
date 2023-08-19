@@ -47,7 +47,7 @@ fetchLinkedInProfile(); // Call the async function
 
 
 // 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
-const accessToken = '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';
+const accessToken = process.env.API_KEY;
 const apiUrl = 'https://api.github.com';
 const container = document.getElementById('project-container');
 fetch(`${apiUrl}/user/repos`, {
