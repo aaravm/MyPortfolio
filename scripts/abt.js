@@ -11,7 +11,7 @@ const fetchLinkedInProfile = async () => {
   const url = 'https://linkedin-profiles1.p.rapidapi.com/extract?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Faarav-mehta-445959250%2F&html=1';
   const options = {
     method: 'GET',
-    headers: {
+    headers: {  
       'X-RapidAPI-Key': '59a6968ebbmsh46014aaadce47fdp1ca106jsn3b8c0b7184f5',
       'X-RapidAPI-Host': 'linkedin-profiles1.p.rapidapi.com'
     }
@@ -44,51 +44,6 @@ const fetchLinkedInProfile = async () => {
 };
 
 fetchLinkedInProfile(); // Call the async function
-
-
-// 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
-const accessToken = process.env.API_KEY;
-const apiUrl = 'https://api.github.com';
-const container = document.getElementById('project-container');
-fetch(`${apiUrl}/user/repos`, {
-  headers: {
-    'Authorization': `Bearer ${accessToken}`
-  }
-})
-
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    // Process the repository data
-    let i=0;
-    // Display the repositories on your webpage
-    data.forEach(project => {
-      const fullname=project.name;
-      const Language=project.language;
-      const created_at=project.created_at;
-      const clone_url=project.clone_url;
-      // Create HTML elements to display project information
-      const projectElement = document.createElement('div');
-      projectElement.innerHTML = `
-      <div class="row">
-          <div class="col">${i}</div>
-          <div class="col">${fullname}</div>
-          <div class="col">${Language}</div>
-          <div class="col">${created_at}</div>
-          <div class="col"><a href=" ${clone_url}">${fullname}</a></div>
-        
-      `;
-      i=i+1;
-      // Append the project element to the container
-      const menu = document.querySelector('#lis');
-      menu.appendChild(projectElement);
-    });
-  })
-  .catch(error => {
-    // Handle any errors
-    console.error(error);
-    
-  });
 
 
 
